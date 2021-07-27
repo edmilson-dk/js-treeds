@@ -4,10 +4,11 @@
     "module": "commonjs",                          
     "allowJs": true,                             
     "checkJs": true,                           
-    "outDir": "./build",                                                      
+    "outDir": "./lib",                                                      
     "strict": true,                                                          
     "esModuleInterop": true,           
-    "skipLibCheck": true,                           
+    "skipLibCheck": true,     
+    "declaration": true,                      
     "forceConsistentCasingInFileNames": true
   },  
   "exclude": ["node_modules", "**/__tests__/*"]
