@@ -1,13 +1,13 @@
 {
   "name": "js-treeds",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "lib/index.js",
   "description": "Best Algorithms and Data Structures library for javascript and typescript.",
   "repository": "git@github.com:edmilson-dk/js-treeds.git",
   "author": "Edmilson Jesus <droidvidaboa@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf lib && tsc",
+    "build": "rm -rf lib && npm run format && tsc",
     "start": "rm -rf lib && tsc && node lib/src/index.js",
     "start:dev": "npx ts-node-dev --respawn --pretty --transpile-only src/index.ts",
     "test": "jest --passWithNoTests --noStackTrace --runInBand",
@@ -25,6 +25,9 @@
   },
   "homepage": "https://github.com/edmilson-dk/js-treeds#readme",
   "files": [
+    "index.d.ts",
+    "index.js",
+    "lib/index.js",
     "lib/**/*"
   ],
   "types": "lib/index.d.ts",
@@ -36,20 +39,18 @@
     "Algorithms",
     "Javascript adavanced data structures",
     "Javascript data structures",
-    "Treemaps",
-    "Treemap",
-    "Binary tree",
-    "Binary search tree",
-    "Sort algorithms"
+    "Sort algorithms",
+    "Search algorithms"
   ],
   "devDependencies": {
     "@types/jest": "^26.0.24",
     "@types/node": "^16.4.3",
     "jest": "^27.0.6",
+    "prettier": "^2.3.2",
     "ts-jest": "^27.0.4",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.3.5"
   },
-  "dependencies": {
-    "tslint": "^6.1.3"
-  }
+  "dependencies": {}
 }
