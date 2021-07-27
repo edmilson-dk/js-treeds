@@ -48,5 +48,8 @@
     "jest": "^27.0.6",
     "ts-jest": "^27.0.4",
     "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "tslint": "^6.1.3"
   }
 }
