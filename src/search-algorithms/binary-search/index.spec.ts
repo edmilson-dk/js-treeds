@@ -26,7 +26,17 @@ describe("Binary search string tests", () => {
     expect(index).toBe(-1);
   });
 
-
+  it("should return -1 if item is not found and left is bigger than right", () => {
+    const array = generateArrayOfString(40, "flag");
+    const wanted = "flag50";
+    const index = binarySearchStr({
+      array,
+      left: array.length,
+      right: 0,
+      wanted
+    });
+    expect(index).toBe(-1);
+  });
 });
 
 describe("Binary search number tests", () => {
