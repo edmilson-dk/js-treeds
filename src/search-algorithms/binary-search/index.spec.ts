@@ -25,6 +25,8 @@ describe("Binary search string tests", () => {
     });
     expect(index).toBe(-1);
   });
+
+
 });
 
 describe("Binary search number tests", () => {
@@ -38,5 +40,17 @@ describe("Binary search number tests", () => {
       wanted
     });
     expect(index).toBe(30);
+  });
+
+  it("should return -1 if item is not found", () => {
+    const array = generateSortedArrayOfNumber(40);
+    const wanted = 42;
+    const index = binarySearchInt({
+      array,
+      left: 0,
+      right: array.length - 1,
+      wanted
+    });
+    expect(index).toBe(-1);
   });
 });
