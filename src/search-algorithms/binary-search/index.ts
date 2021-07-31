@@ -2,7 +2,8 @@ import { BinarySearchIntPropsType, BinarySearchStrPropsType } from "./types";
 
 export function binarySearchStr({ array, left, right, wanted }: BinarySearchStrPropsType): number {
   if (right >= left) {
-    const middle = (left + right) >>> 1;
+    // https://stackoverflow.com/questions/6735259/calculating-mid-in-binary-search
+    const middle = left + Math.floor((right - left) / 2);
     const foundIndex = wanted.localeCompare(array[middle]);
 
     if (foundIndex === 0) {
@@ -29,7 +30,8 @@ export function binarySearchStr({ array, left, right, wanted }: BinarySearchStrP
 
 export function binarySearchInt({ array, left, right, wanted }: BinarySearchIntPropsType): number {
   if (right >= left) {
-    const middle = (left + right) >>> 1;
+    // https://stackoverflow.com/questions/6735259/calculating-mid-in-binary-search
+    const middle = left + Math.floor((right - left) / 2);
 
     if (array[middle] === wanted) {
       return middle;
