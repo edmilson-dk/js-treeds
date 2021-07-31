@@ -1,4 +1,4 @@
-import { generateSortedArrayOfNumber } from "../../__tests__/utils";
+import { generateArrayOfString, generateSortedArrayOfNumber } from "../../__tests__/utils";
 import { linearSearch } from "./index";
 
 describe("Linear search tests", () => {
@@ -28,5 +28,12 @@ describe("Linear search tests", () => {
     const wanted = -31;
     const index = linearSearch<Number>({ array, wanted });
     expect(index).toBe(-1);
+  });
+
+  it("should return item index is found in array of strings", () => {
+    const array = generateArrayOfString(30, "flag");
+    const wanted = "flag20";
+    const index = linearSearch<String>({ array, wanted });
+    expect(index).toBe(20);
   });
 });
