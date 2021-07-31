@@ -22,4 +22,11 @@ describe("Linear search tests", () => {
     const index = linearSearch<Number>({ array, wanted });
     expect(index).toBe(29);
   });
+
+  it("should return -1 if item is not found using negative numbers in array", () => {
+    const array = generateSortedArrayOfNumber(30, true);
+    const wanted = -31;
+    const index = linearSearch<Number>({ array, wanted });
+    expect(index).toBe(-1);
+  });
 });
