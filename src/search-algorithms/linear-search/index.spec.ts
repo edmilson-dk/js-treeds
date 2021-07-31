@@ -8,4 +8,11 @@ describe("Linear search tests", () => {
     const index = linearSearch<Number>({ array, wanted });
     expect(index).toBe(2);
   });
+
+  it("should return -1 when the item is not found", () => {
+    const array = generateSortedArrayOfNumber(30);
+    const wanted = 31;
+    const index = linearSearch<Number>({ array, wanted });
+    expect(index).toBe(-1);
+  });
 });
