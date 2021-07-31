@@ -4,6 +4,6 @@ export function generateArrayOfString(count: number, flag: string): string[] {
 }
 
 export function generateSortedArrayOfNumber(count: number, isNegative = false): number[] {
-  const array = Array.from({ length: count }, (v, k) => isNegative ? -Math.abs(k) : k);
+  const array = Array.from({ length: count }, (v, k) => (isNegative ? -Math.abs(k) : k));
   return array;
 }
