@@ -15,4 +15,11 @@ describe("Linear search tests", () => {
     const index = linearSearch<Number>({ array, wanted });
     expect(index).toBe(-1);
   });
+
+  it("should return item index if item is found using negative numbers in array", () => {
+    const array = generateSortedArrayOfNumber(30, true);
+    const wanted = -29;
+    const index = linearSearch<Number>({ array, wanted });
+    expect(index).toBe(29);
+  });
 });

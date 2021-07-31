@@ -3,7 +3,7 @@ export function generateArrayOfString(count: number, flag: string): string[] {
   return array;
 }
 
-export function generateSortedArrayOfNumber(count: number): number[] {
-  const array = Array.from({ length: count }, (v, k) => k);
+export function generateSortedArrayOfNumber(count: number, isNegative = false): number[] {
+  const array = Array.from({ length: count }, (v, k) => isNegative ? -Math.abs(k) : k);
   return array;
 }
