@@ -63,4 +63,16 @@ describe("Binary search number tests", () => {
     });
     expect(index).toBe(-1);
   });
+
+  it("should return -1 if item is not found and left is bigger than right", () => {
+    const array = generateSortedArrayOfNumber(40);
+    const wanted = 42;
+    const index = binarySearchInt({
+      array,
+      left: array.length,
+      right: 0,
+      wanted
+    });
+    expect(index).toBe(-1);
+  });
 });
