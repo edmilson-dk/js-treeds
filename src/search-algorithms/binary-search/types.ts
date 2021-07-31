@@ -3,4 +3,11 @@ export type BinarySearchStrPropsType = {
   left: number,
   right: number,
   wanted: string;
-}
+};
+
+export type BinarySearchIntPropsType = {
+  array: number[],
+  left: number,
+  right: number,
+  wanted: number;
+};

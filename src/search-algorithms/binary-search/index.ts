@@ -1,4 +1,4 @@
-import { BinarySearchStrPropsType } from "./types";
+import { BinarySearchIntPropsType, BinarySearchStrPropsType } from "./types";
 
 export function binarySearchStr({ array, left, right, wanted }: BinarySearchStrPropsType): number {
   if (right >= left) {
@@ -17,6 +17,34 @@ export function binarySearchStr({ array, left, right, wanted }: BinarySearchStrP
       });
     }
     return binarySearchStr({
+      array,
+      left: middle + 1,
+      right,
+      wanted
+    });
+  }
+
+  return -1;
+}
+
+export function binarySearchInt({ array, left, right, wanted }: BinarySearchIntPropsType): number {
+  if (right >= left) {
+    const middle = (left + right) >>> 1;
+
+    if (array[middle] === wanted) {
+      return middle;
+    }
+
+    if (array[middle] > wanted) {
+      return binarySearchInt({
+        array,
+        left,
+        right: middle - 1,
+        wanted
+      });
+    }
+
+    return binarySearchInt({
       array,
       left: middle + 1,
       right,
