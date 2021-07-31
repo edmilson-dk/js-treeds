@@ -36,4 +36,11 @@ describe("Linear search tests", () => {
     const index = linearSearch<String>({ array, wanted });
     expect(index).toBe(20);
   });
+
+  it("should return -1 if item is not found in array of strings", () => {
+    const array = generateArrayOfString(30, "flag");
+    const wanted = "flag31";
+    const index = linearSearch<String>({ array, wanted });
+    expect(index).toBe(-1);
+  });
 });
