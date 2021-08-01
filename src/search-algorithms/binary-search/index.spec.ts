@@ -4,14 +4,14 @@ import { binarySearchStr, binarySearchInt } from "./index";
 describe("Binary search string tests", () => {
   it("should return item index if item is found", () => {
     const array = generateArrayOfString(40, "flag");
-    const wanted = "flag30";
+    const wanted = "flag34";
     const index = binarySearchStr({
       array,
       left: 0,
-      right: array.length - 1,
+      right: array.length,
       wanted
     });
-    expect(index).toBe(30);
+    expect(index).toBe(34);
   });
 
   it("should return -1 if item is not found", () => {
@@ -20,7 +20,7 @@ describe("Binary search string tests", () => {
     const index = binarySearchStr({
       array,
       left: 0,
-      right: array.length - 1,
+      right: array.length,
       wanted
     });
     expect(index).toBe(-1);
@@ -58,7 +58,7 @@ describe("Binary search number tests", () => {
     const index = binarySearchInt({
       array,
       left: 0,
-      right: array.length - 1,
+      right: array.length,
       wanted
     });
     expect(index).toBe(30);
@@ -70,7 +70,7 @@ describe("Binary search number tests", () => {
     const index = binarySearchInt({
       array,
       left: 0,
-      right: array.length - 1,
+      right: array.length,
       wanted
     });
     expect(index).toBe(-1);
