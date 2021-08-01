@@ -4,11 +4,13 @@ export function binarySearchStr({ array, left, right, wanted }: BinarySearchStrP
   if (right >= left) {
     // https://stackoverflow.com/questions/6735259/calculating-mid-in-binary-search
     const middle = left + Math.floor((right - left) / 2);
-    const foundIndex = wanted.localeCompare(array[middle]);
+    const compare = new Intl.Collator();
+    const foundIndex = compare.compare(wanted, array[middle]);
 
     if (foundIndex === 0) {
       return middle;
     }
+
     if (foundIndex < 0) {
       return binarySearchStr({
         array,
@@ -17,6 +19,7 @@ export function binarySearchStr({ array, left, right, wanted }: BinarySearchStrP
         wanted
       });
     }
+
     return binarySearchStr({
       array,
       left: middle + 1,
