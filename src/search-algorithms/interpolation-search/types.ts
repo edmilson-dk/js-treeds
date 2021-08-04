@@ -3,4 +3,4 @@ export type InterpolationSearchPropsType = {
   wanted: number;
   startIndex: number;
   endIndex: number;
-}
+};

@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es6",                                
-    "module": "commonjs",                          
-    "allowJs": true,                             
-    "checkJs": true,                           
-    "outDir": "./lib",                                                      
-    "strict": true,                                                          
-    "esModuleInterop": true,           
-    "skipLibCheck": true,     
-    "declaration": true,                      
+    "target": "es6",
+    "module": "commonjs",
+    "allowJs": true,
+    "checkJs": true,
+    "outDir": "./lib",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": true,
     "forceConsistentCasingInFileNames": true
-  },  
+  },
   "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*", "**/*.test.ts", "**/*.spec.ts"]
+  "exclude": [".github", "node_modules", "**/__tests__/*", "**/*.test.ts", "**/*.spec.ts"]
 }
