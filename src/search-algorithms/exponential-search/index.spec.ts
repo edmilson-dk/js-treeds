@@ -34,4 +34,15 @@ describe("Exponential Search tests", () => {
     });
     expect(index).toBe(0);
   });
+
+  it("should return the index of element if it is present in last position of the array", () => {
+    const array = generateSortedArrayOfNumber(40);
+    const wanted = 39;
+
+    const index = exponentialSearch({
+      array,
+      wanted,
+    });
+    expect(index).toBe(39);
+  });
 });
