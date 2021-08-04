@@ -38,4 +38,16 @@ describe("Ternary Search tests", () => {
     });
     expect(index).toBe(-1);
   });
+
+  it("should return -1 if left and right are bigger than array length", () => {
+    const array = generateSortedArrayOfNumber(40);
+    const wanted = 42;
+    const index = ternarySearch({
+      array,
+      left: array.length + 1,
+      right: array.length + 1,
+      wanted,
+    });
+    expect(index).toBe(-1);
+  });
 });
