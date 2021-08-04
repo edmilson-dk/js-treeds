@@ -23,4 +23,15 @@ describe("Exponential Search tests", () => {
     });
     expect(index).toBe(-1);
   });
+
+  it("should return the of element if it is present in first position of the array", () => {
+    const array = generateSortedArrayOfNumber(40);
+    const wanted = 0;
+
+    const index = exponentialSearch({
+      array,
+      wanted,
+    });
+    expect(index).toBe(0);
+  });
 });
