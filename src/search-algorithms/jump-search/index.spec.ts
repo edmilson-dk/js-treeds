@@ -10,7 +10,7 @@ describe("Jump searc tests", () => {
     const index = jumpSearch({
       array,
       wanted,
-      arrayLength
+      arrayLength,
     });
 
     expect(index).toBe(34);
@@ -24,7 +24,7 @@ describe("Jump searc tests", () => {
     const index = jumpSearch({
       array,
       wanted,
-      arrayLength
+      arrayLength,
     });
 
     expect(index).toBe(-1);
@@ -38,7 +38,7 @@ describe("Jump searc tests", () => {
     const index = jumpSearch({
       array,
       wanted,
-      arrayLength
+      arrayLength,
     });
 
     expect(index).toBe(-1);
