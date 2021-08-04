@@ -1,13 +1,23 @@
 import { InterpolationSearchPropsType } from "./types";
 
-export function interpolationSearch({ array, endIndex, startIndex, wanted }: InterpolationSearchPropsType): number {
+// Does not work correctly with negative number arrays
+// Only works with ordered number arrays
+
+export function interpolationSearch({
+  array,
+  endIndex,
+  startIndex,
+  wanted,
+}: InterpolationSearchPropsType): number {
   let position = 0;
 
   if (startIndex <= endIndex && wanted >= array[startIndex] && wanted <= array[endIndex]) {
-    position = startIndex + Math.floor(
-      ((endIndex - startIndex) / (array[endIndex] - array[startIndex]))
-      * (wanted - array[startIndex])
-    );
+    position =
+      startIndex +
+      Math.floor(
+        ((endIndex - startIndex) / (array[endIndex] - array[startIndex])) *
+          (wanted - array[startIndex]),
+      );
 
     if (array[position] === wanted) {
       return position;
@@ -18,7 +28,7 @@ export function interpolationSearch({ array, endIndex, startIndex, wanted }: Int
         array,
         endIndex,
         startIndex: position + 1,
-        wanted
+        wanted,
       });
     }
 
@@ -27,7 +37,7 @@ export function interpolationSearch({ array, endIndex, startIndex, wanted }: Int
         array,
         endIndex: position - 1,
         startIndex,
-        wanted
+        wanted,
       });
     }
   }

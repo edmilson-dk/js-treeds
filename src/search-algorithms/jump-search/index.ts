@@ -1,5 +1,8 @@
 import { JumpSearchPropsType } from "./types";
 
+// Does not work correctly with negative number arrays
+// Only works with ordered number arrays
+
 export function jumpSearch({ array, arrayLength, wanted }: JumpSearchPropsType): number {
   let step = Math.sqrt(arrayLength);
   let prev = 0;

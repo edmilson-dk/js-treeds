@@ -1,6 +1,9 @@
 import { binarySearchInt } from "../binary-search";
 import { ExponentialSearchPropsType } from "./types";
 
+// Does not work correctly with negative number arrays
+// Only works with ordered number arrays
+
 export function exponentialSearch({ array, wanted }: ExponentialSearchPropsType): number {
   const arrayLength = array.length;
 
@@ -14,7 +17,7 @@ export function exponentialSearch({ array, wanted }: ExponentialSearchPropsType)
   return binarySearchInt({
     array,
     left: index / 2,
-    right: Math.min(index, arrayLength-1),
-    wanted
+    right: Math.min(index, arrayLength - 1),
+    wanted,
   });
 }

@@ -15,7 +15,7 @@ export function binarySearchStr({ array, left, right, wanted }: BinarySearchStrP
         array,
         left,
         right: middle - 1,
-        wanted
+        wanted,
       });
     }
 
@@ -23,12 +23,15 @@ export function binarySearchStr({ array, left, right, wanted }: BinarySearchStrP
       array,
       left: middle + 1,
       right,
-      wanted
+      wanted,
     });
   }
 
   return -1;
 }
+
+// Does not work correctly with negative number arrays
+// Only works with ordered number arrays
 
 export function binarySearchInt({ array, left, right, wanted }: BinarySearchIntPropsType): number {
   if (right >= left) {
@@ -44,7 +47,7 @@ export function binarySearchInt({ array, left, right, wanted }: BinarySearchIntP
         array,
         left,
         right: middle - 1,
-        wanted
+        wanted,
       });
     }
 
@@ -52,7 +55,7 @@ export function binarySearchInt({ array, left, right, wanted }: BinarySearchIntP
       array,
       left: middle + 1,
       right,
-      wanted
+      wanted,
     });
   }
 

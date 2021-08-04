@@ -9,7 +9,7 @@ describe("Binary search string tests", () => {
       array,
       left: 0,
       right: array.length,
-      wanted
+      wanted,
     });
     expect(index).toBe(34);
   });
@@ -21,7 +21,7 @@ describe("Binary search string tests", () => {
       array,
       left: 0,
       right: array.length,
-      wanted
+      wanted,
     });
     expect(index).toBe(-1);
   });
@@ -33,7 +33,7 @@ describe("Binary search string tests", () => {
       array,
       left: array.length,
       right: 0,
-      wanted
+      wanted,
     });
     expect(index).toBe(-1);
   });
@@ -45,7 +45,7 @@ describe("Binary search string tests", () => {
       array,
       left: array.length + 1,
       right: array.length + 1,
-      wanted
+      wanted,
     });
     expect(index).toBe(-1);
   });
@@ -59,7 +59,7 @@ describe("Binary search number tests", () => {
       array,
       left: 0,
       right: array.length,
-      wanted
+      wanted,
     });
     expect(index).toBe(30);
   });
@@ -71,7 +71,7 @@ describe("Binary search number tests", () => {
       array,
       left: 0,
       right: array.length,
-      wanted
+      wanted,
     });
     expect(index).toBe(-1);
   });
@@ -83,7 +83,7 @@ describe("Binary search number tests", () => {
       array,
       left: array.length,
       right: 0,
-      wanted
+      wanted,
     });
     expect(index).toBe(-1);
   });
@@ -95,7 +95,7 @@ describe("Binary search number tests", () => {
       array,
       left: array.length + 1,
       right: array.length + 1,
-      wanted
+      wanted,
     });
     expect(index).toBe(-1);
   });

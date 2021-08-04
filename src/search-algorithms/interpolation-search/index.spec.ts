@@ -11,7 +11,7 @@ describe("Interpolation Search tests", () => {
       array,
       wanted,
       endIndex: arrayLength - 1,
-      startIndex: 0
+      startIndex: 0,
     });
     expect(index).toBe(20);
   });
@@ -25,10 +25,10 @@ describe("Interpolation Search tests", () => {
       array,
       wanted,
       endIndex: arrayLength - 1,
-      startIndex: 0
+      startIndex: 0,
     });
     expect(index).toBe(0);
-  })
+  });
 
   it("should return the index of element if it is present in last position of the array", () => {
     const array = generateSortedArrayOfNumber(40);
@@ -39,10 +39,10 @@ describe("Interpolation Search tests", () => {
       array,
       wanted,
       endIndex: arrayLength - 1,
-      startIndex: 0
+      startIndex: 0,
     });
     expect(index).toBe(39);
-  })
+  });
 
   it("should return -1 if the element is not present", () => {
     const array = generateSortedArrayOfNumber(40);
@@ -53,7 +53,7 @@ describe("Interpolation Search tests", () => {
       array,
       wanted,
       endIndex: arrayLength - 1,
-      startIndex: 0
+      startIndex: 0,
     });
     expect(index).toBe(-1);
   });
