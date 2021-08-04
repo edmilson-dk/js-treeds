@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/Academic-Code/js-treeds/tree/main/.github/png/js-treeds.png">
+  <img src="https://github.com/Academic-Code/js-treeds/blob/main/.github/png/js-treeds.png">
 </p>
 
 Best Algorithms and Data Structures library for javascript.
