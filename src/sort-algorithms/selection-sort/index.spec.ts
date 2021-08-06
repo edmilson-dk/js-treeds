@@ -1,4 +1,9 @@
-import { generateNotSortedArrayOfNumber, generateSortedArrayOfNumber } from "../../__tests__/utils";
+import {
+  generateNotSortedArrayOfNumber,
+  generateSortedArrayOfNumber,
+  arrayNotOrdenatedWithRepeatedElements,
+  arrayOrdenatedWithRepeatedElements,
+} from "../../__tests__/utils";
 import { selectionSort } from "./index";
 
 describe("Selection Sort tests", () => {
@@ -29,6 +34,14 @@ describe("Selection Sort tests", () => {
     const sortedArray = generateNotSortedArrayOfNumber(30, true);
     selectionSort({ array });
 
+    expect(array).toEqual(sortedArray);
+  });
+
+  it("should return an ordered array when the array contains repeated elements", () => {
+    const array = arrayNotOrdenatedWithRepeatedElements;
+    const sortedArray = arrayOrdenatedWithRepeatedElements;
+
+    selectionSort({ array });
     expect(array).toEqual(sortedArray);
   });
 });

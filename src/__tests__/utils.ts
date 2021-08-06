@@ -13,3 +13,6 @@ export function generateNotSortedArrayOfNumber(count: number, isNegative = false
   array.reverse();
   return array;
 }
+
+export const arrayNotOrdenatedWithRepeatedElements = [1, 3, 1, 4, 3, 5, 10, 12, 10, 23, 4, 11];
+export const arrayOrdenatedWithRepeatedElements = [1, 1, 3, 3, 4, 4, 5, 10, 10, 11, 12, 23];
