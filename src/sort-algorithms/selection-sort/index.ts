@@ -1,7 +1,7 @@
 import { swap } from "../../utils";
 import { SelectionSortPropsType } from "./types";
 
-export function selectionSort({ array }: SelectionSortPropsType): void {
+export function selectionSort({ array, isDecreasing = true }: SelectionSortPropsType): void {
   let leftIndex = 0;
   let rightIndex = 0;
   let targetIndex = 0;
@@ -11,7 +11,11 @@ export function selectionSort({ array }: SelectionSortPropsType): void {
     targetIndex = leftIndex;
 
     for (rightIndex = leftIndex + 1; rightIndex < arrayLength; rightIndex++) {
-      if (array[rightIndex] < array[targetIndex]) {
+      let validator = isDecreasing
+        ? array[rightIndex] < array[targetIndex]
+        : array[rightIndex] > array[targetIndex];
+
+      if (validator) {
         targetIndex = rightIndex;
       }
     }
