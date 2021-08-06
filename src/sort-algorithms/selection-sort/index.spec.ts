@@ -16,10 +16,19 @@ describe("Selection Sort tests", () => {
 
     expect(array).toEqual(array);
   });
+
   it("should return sorted array when array is empty", () => {
     const array: number[] = [];
     selectionSort({ array });
 
     expect(array).toEqual([]);
+  });
+
+  it("should return sorted array when array contains negative numbers", () => {
+    const array = generateSortedArrayOfNumber(30, true);
+    const sortedArray = generateNotSortedArrayOfNumber(30, true);
+    selectionSort({ array });
+
+    expect(array).toEqual(sortedArray);
   });
 });
