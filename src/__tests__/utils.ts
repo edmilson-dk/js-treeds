@@ -7,3 +7,9 @@ export function generateSortedArrayOfNumber(count: number, isNegative = false): 
   const array = Array.from({ length: count }, (v, k) => (isNegative ? -Math.abs(k) : k));
   return array;
 }
+
+export function generateNotSortedArrayOfNumber(count: number, isNegative = false): number[] {
+  const array = Array.from({ length: count }, (v, k) => (isNegative ? -Math.abs(k) : k));
+  array.reverse();
+  return array;
+}
