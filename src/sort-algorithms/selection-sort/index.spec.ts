@@ -9,4 +9,11 @@ describe("Selection Sort tests", () => {
 
     expect(array).toEqual(sortedArray);
   });
+
+  it("should return sorted array when array is already sorted", () => {
+    const array = generateSortedArrayOfNumber(30);
+    selectionSort({ array });
+
+    expect(array).toEqual(array);
+  });
 });
