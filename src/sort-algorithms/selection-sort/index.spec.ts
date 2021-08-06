@@ -44,4 +44,12 @@ describe("Selection Sort tests", () => {
     selectionSort({ array });
     expect(array).toEqual(sortedArray);
   });
+
+  it("should return sorted big array", () => {
+    const array = generateNotSortedArrayOfNumber(20000);
+    const sortedArray = generateSortedArrayOfNumber(20000);
+    selectionSort({ array });
+
+    expect(array).toEqual(sortedArray);
+  });
 });
