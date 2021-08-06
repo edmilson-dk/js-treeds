@@ -16,4 +16,10 @@ describe("Selection Sort tests", () => {
 
     expect(array).toEqual(array);
   });
+  it("should return sorted array when array is empty", () => {
+    const array: number[] = [];
+    selectionSort({ array });
+
+    expect(array).toEqual([]);
+  });
 });
