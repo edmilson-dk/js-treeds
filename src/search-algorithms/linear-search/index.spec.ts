@@ -41,6 +41,13 @@ describe("Linear search tests", () => {
     expect(index).toBe(22);
   });
 
+  it("should return -1 if item is not found using floating numbers in array", () => {
+    const array = generateSortedArrayOfNumbersFloating(30);
+    const wanted = 3.0;
+    const index = linearSearch<number>({ array, wanted });
+    expect(index).toBe(-1);
+  });
+
   it("should return item index is found in array of strings", () => {
     const array = generateArrayOfString(30, "flag");
     const wanted = "flag20";
