@@ -67,6 +67,7 @@ const index = linearSearch({ array, wanted });
 - Implementações separadas para arrays de strings e arrays de números
 - Complexidade O(Log n) log de N
 - Não suporta arrays com números negativos
+- Suporta array com números de ponto flutuante
 - A implementação funciona em arrays ordenados e préviamente ordenados
 - O índice retornado caso o elemento seja encontrado é sempre da primeira ocorrência do valor procurado, em casos de arrays com valores duplicados
 

@@ -1,4 +1,8 @@
-import { generateArrayOfString, generateSortedArrayOfNumber } from "../../__tests__/utils";
+import {
+  generateArrayOfString,
+  generateSortedArrayOfNumber,
+  generateSortedArrayOfNumbersFloating,
+} from "../../__tests__/utils";
 import { binarySearchStr, binarySearchInt } from "./index";
 
 describe("Binary search string tests", () => {
@@ -98,5 +102,17 @@ describe("Binary search number tests", () => {
       wanted,
     });
     expect(index).toBe(-1);
+  });
+
+  it("should return item index if item is found using floating numbers in array", () => {
+    const array = generateSortedArrayOfNumbersFloating(30);
+    const wanted = 2.2;
+    const index = binarySearchInt({
+      array,
+      left: 0,
+      right: array.length,
+      wanted,
+    });
+    expect(index).toBe(22);
   });
 });
