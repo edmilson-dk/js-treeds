@@ -10,7 +10,7 @@
 
 ### Linear search
 
-> O algoritmo de busca linear é o menos indicado para grandes arrays de valores, por possuir uma complexidade assíntotica de O(n).
+> O algoritmo de busca linear é o menos indicado para grandes arrays de valores, por possuir uma complexidade assintótica de O(n).
 
 - A implementação suporta arrays com valores de tipos distintos
 - Complexidade O(n) linear
