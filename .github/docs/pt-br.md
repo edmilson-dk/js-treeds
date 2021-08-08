@@ -62,7 +62,7 @@ const index = linearSearch({ array, wanted });
 ### Binary search
 
 > O algoritmo de busca binária é recomendável em grandes arrays com valos ordenados de alguma forma previsível tendo como complexidade assintótica O(log N), por exemplo um array com valores ordenados da seguinte forma [1, 2, 4, 5, 6, 8, 9, 10, 12, 14...]
-> o array não está completamente ordenado, pórem você consegue prever os próximos valores da sequência, é nestes casos que a busca binária se dá bem, em casos de arrays grandes e completamente ordenados, o indicado é a utilização do algoritmo de [busca por interpolação](#interpolation-search) pela possibilidade detse outro algoritmo conseguir determinar através do valor procurado, o intervalo correto para começar a buscar o elemento, diminuindo as operações de busca em relação a busca binária.
+> o array não está completamente ordenado, pórem você consegue prever os próximos valores da sequência, é nestes casos que a busca binária se dá bem, em casos de arrays grandes e completamente ordenados, o indicado é a utilização do algoritmo de [busca por interpolação](#interpolation-search) pela possibilidade deste outro algoritmo conseguir determinar através do valor procurado, o intervalo correto para começar a buscar o elemento, diminuindo as operações de busca em relação a busca binária.
 
 - Implementações separadas para arrays de strings e arrays de números
 - Complexidade O(Log n) log de N
