@@ -1,4 +1,8 @@
-import { generateArrayOfString, generateSortedArrayOfNumber } from "../../__tests__/utils";
+import {
+  generateArrayOfString,
+  generateSortedArrayOfNumber,
+  generateSortedArrayOfNumbersFloating,
+} from "../../__tests__/utils";
 import { linearSearch } from "./index";
 
 describe("Linear search tests", () => {
@@ -28,6 +32,13 @@ describe("Linear search tests", () => {
     const wanted = -31;
     const index = linearSearch<number>({ array, wanted });
     expect(index).toBe(-1);
+  });
+
+  it("should return item index if item is found using floating numbers in array", () => {
+    const array = generateSortedArrayOfNumbersFloating(30);
+    const wanted = 2.2;
+    const index = linearSearch<number>({ array, wanted });
+    expect(index).toBe(22);
   });
 
   it("should return item index is found in array of strings", () => {
