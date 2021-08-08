@@ -115,4 +115,16 @@ describe("Binary search number tests", () => {
     });
     expect(index).toBe(22);
   });
+
+  it("should return -1 if item is not found using floating numbers in array", () => {
+    const array = generateSortedArrayOfNumbersFloating(30);
+    const wanted = 3.0;
+    const index = binarySearchInt({
+      array,
+      left: 0,
+      right: array.length,
+      wanted,
+    });
+    expect(index).toBe(-1);
+  });
 });
