@@ -22,4 +22,4 @@ Best Algorithms and Data Structures library for javascript.
 
 ## Documentation
 
-- [PT-BR]("https://github.com/Academic-Code/js-treeds/blob/main/.github/docs/pt-br.md)
+- [PT-BR](https://github.com/Academic-Code/js-treeds/blob/main/.github/docs/pt-br.md)
