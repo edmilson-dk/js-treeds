@@ -13,3 +13,13 @@
 </p>
 
 Best Algorithms and Data Structures library for javascript.
+
+## Summary
+
+- [Documentation](#docs)
+
+<a id="docs"></a>
+
+## Documentation
+
+[PT-BR]("https://github.com/Academic-Code/js-treeds/blob/main/.github/docs/pt-br.md)
