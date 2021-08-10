@@ -7,9 +7,10 @@ import {
 import { selectionSort } from "./index";
 
 describe("Selection Sort tests", () => {
-  it("should return sorted array", () => {
-    const array = generateNotSortedArrayOfNumber(30);
-    const sortedArray = generateSortedArrayOfNumber(30);
+  it("must return an array ordered from smallest to largest", () => {
+    const array = generateNotSortedArrayOfNumber(60);
+    const sortedArray = generateSortedArrayOfNumber(60);
+
     selectionSort({ array });
 
     expect(array).toEqual(sortedArray);
