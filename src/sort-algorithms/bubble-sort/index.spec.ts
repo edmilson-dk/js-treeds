@@ -2,7 +2,9 @@ import {
   arrayNotOrdenatedWithRepeatedElements,
   arrayOrdenatedWithRepeatedElements,
   generateNotSortedArrayOfNumber,
+  generateNotSortedArrayOfNumbersFloating,
   generateSortedArrayOfNumber,
+  generateSortedArrayOfNumbersFloating,
 } from "../../__tests__/utils";
 import { bubbleSort } from "./index";
 
@@ -30,13 +32,21 @@ describe("Bubble sort tests", () => {
     const sortedArray = generateNotSortedArrayOfNumber(30, true);
 
     bubbleSort({ array });
-
     expect(array).toEqual(sortedArray);
   });
 
   it("should return an ordered array when the array contains repeated elements", () => {
     const array = arrayNotOrdenatedWithRepeatedElements;
     const sortedArray = arrayOrdenatedWithRepeatedElements;
+
+    bubbleSort({ array });
+
+    expect(array).toEqual(sortedArray);
+  });
+
+  it("should return sorted array when array contains floating numbers", () => {
+    const array = generateNotSortedArrayOfNumbersFloating(30);
+    const sortedArray = generateSortedArrayOfNumbersFloating(30);
 
     bubbleSort({ array });
 
