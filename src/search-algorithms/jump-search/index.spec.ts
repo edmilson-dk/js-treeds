@@ -59,4 +59,17 @@ describe("Jump searc tests", () => {
     });
     expect(index).toBe(22);
   });
+
+  it("should return -1 if item is not found using floating numbers in array", () => {
+    const array = generateSortedArrayOfNumbersFloating(30);
+    const wanted = 3.0;
+
+    const arrayLength = array.length;
+    const index = jumpSearch({
+      array,
+      wanted,
+      arrayLength,
+    });
+    expect(index).toBe(-1);
+  });
 });
