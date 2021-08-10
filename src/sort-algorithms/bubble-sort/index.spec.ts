@@ -19,4 +19,13 @@ describe("Bubble sort tests", () => {
 
     expect(array).toEqual(sortedArray);
   });
+
+  it("should return sorted array when array contains negative numbers", () => {
+    const array = generateSortedArrayOfNumber(30, true);
+    const sortedArray = generateNotSortedArrayOfNumber(30, true);
+
+    bubbleSort({ array });
+
+    expect(array).toEqual(sortedArray);
+  });
 });
