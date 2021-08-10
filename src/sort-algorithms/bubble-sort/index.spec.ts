@@ -1,4 +1,9 @@
-import { generateNotSortedArrayOfNumber, generateSortedArrayOfNumber } from "../../__tests__/utils";
+import {
+  arrayNotOrdenatedWithRepeatedElements,
+  arrayOrdenatedWithRepeatedElements,
+  generateNotSortedArrayOfNumber,
+  generateSortedArrayOfNumber,
+} from "../../__tests__/utils";
 import { bubbleSort } from "./index";
 
 describe("Bubble sort tests", () => {
@@ -23,6 +28,15 @@ describe("Bubble sort tests", () => {
   it("should return sorted array when array contains negative numbers", () => {
     const array = generateSortedArrayOfNumber(30, true);
     const sortedArray = generateNotSortedArrayOfNumber(30, true);
+
+    bubbleSort({ array });
+
+    expect(array).toEqual(sortedArray);
+  });
+
+  it("should return an ordered array when the array contains repeated elements", () => {
+    const array = arrayNotOrdenatedWithRepeatedElements;
+    const sortedArray = arrayOrdenatedWithRepeatedElements;
 
     bubbleSort({ array });
 
