@@ -3,6 +3,8 @@ import {
   generateSortedArrayOfNumber,
   arrayNotOrdenatedWithRepeatedElements,
   arrayOrdenatedWithRepeatedElements,
+  generateNotSortedArrayOfNumbersFloating,
+  generateSortedArrayOfNumbersFloating,
 } from "../../__tests__/utils";
 import { selectionSort } from "./index";
 
@@ -42,6 +44,7 @@ describe("Selection Sort tests", () => {
   it("should return sorted array when array contains negative numbers", () => {
     const array = generateSortedArrayOfNumber(30, true);
     const sortedArray = generateNotSortedArrayOfNumber(30, true);
+
     selectionSort({ array });
 
     expect(array).toEqual(sortedArray);
@@ -58,6 +61,16 @@ describe("Selection Sort tests", () => {
   it("should return sorted big array", () => {
     const array = generateNotSortedArrayOfNumber(20000);
     const sortedArray = generateSortedArrayOfNumber(20000);
+
+    selectionSort({ array });
+
+    expect(array).toEqual(sortedArray);
+  });
+
+  it("should return sorted array when array contains floating numbers", () => {
+    const array = generateNotSortedArrayOfNumbersFloating(30);
+    const sortedArray = generateSortedArrayOfNumbersFloating(30);
+
     selectionSort({ array });
 
     expect(array).toEqual(sortedArray);
