@@ -1,4 +1,7 @@
-import { generateSortedArrayOfNumber } from "../../__tests__/utils";
+import {
+  generateSortedArrayOfNumber,
+  generateSortedArrayOfNumbersFloating,
+} from "../../__tests__/utils";
 import { jumpSearch } from "./index";
 
 describe("Jump searc tests", () => {
@@ -42,5 +45,18 @@ describe("Jump searc tests", () => {
     });
 
     expect(index).toBe(-1);
+  });
+
+  it("should return item index if item is found using floating numbers in array", () => {
+    const array = generateSortedArrayOfNumbersFloating(30);
+    const wanted = 2.2;
+
+    const arrayLength = array.length;
+    const index = jumpSearch({
+      array,
+      wanted,
+      arrayLength,
+    });
+    expect(index).toBe(22);
   });
 });
