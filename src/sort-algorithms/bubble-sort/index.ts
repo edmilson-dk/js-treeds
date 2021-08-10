@@ -9,13 +9,13 @@ export function bubbleSort({ array, isDecreasing = true }: BubbleSortPropsType):
   for (leftIndex = 0; leftIndex < arrayLength - 1; leftIndex++) {
     for (rightIndex = 0; rightIndex < arrayLength - leftIndex; rightIndex++) {
       if (isDecreasing && array[rightIndex] > array[rightIndex + 1]) {
-        swap({
+        swap<number>({
           array,
           indexA: rightIndex,
           indexB: rightIndex + 1,
         });
       } else if (!isDecreasing && array[rightIndex] < array[rightIndex + 1]) {
-        swap({
+        swap<number>({
           array,
           indexA: rightIndex + 1,
           indexB: rightIndex,
