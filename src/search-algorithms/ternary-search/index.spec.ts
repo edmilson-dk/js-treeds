@@ -1,4 +1,7 @@
-import { generateSortedArrayOfNumber } from "../../__tests__/utils";
+import {
+  generateSortedArrayOfNumber,
+  generateSortedArrayOfNumbersFloating,
+} from "../../__tests__/utils";
 import { ternarySearch } from "./index";
 
 describe("Ternary Search tests", () => {
@@ -46,6 +49,19 @@ describe("Ternary Search tests", () => {
       array,
       left: array.length + 1,
       right: array.length + 1,
+      wanted,
+    });
+    expect(index).toBe(-1);
+  });
+
+  it("should return -1 if array using floating numbers in array", () => {
+    const array = generateSortedArrayOfNumbersFloating(30);
+    const wanted = 2.2;
+
+    const index = ternarySearch({
+      array,
+      left: array.length,
+      right: array.length,
       wanted,
     });
     expect(index).toBe(-1);
