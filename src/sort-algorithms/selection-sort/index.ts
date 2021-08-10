@@ -20,7 +20,7 @@ export function selectionSort({ array, isDecreasing = true }: SelectionSortProps
       }
     }
 
-    swap({
+    swap<number>({
       array,
       indexA: targetIndex,
       indexB: leftIndex,
