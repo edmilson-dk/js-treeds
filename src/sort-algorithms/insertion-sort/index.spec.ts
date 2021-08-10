@@ -10,4 +10,12 @@ describe("Insertion sort tests", () => {
 
     expect(array).toEqual(sortedArray);
   });
+
+  it("should return sorted array when array is already sorted", () => {
+    const array = generateSortedArrayOfNumber(30);
+
+    insertionSort({ array });
+
+    expect(array).toEqual(array);
+  });
 });
