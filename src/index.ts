@@ -8,3 +8,4 @@ export * from "./search-algorithms/ternary-search";
 
 // sort algorithms
 export * from "./sort-algorithms/selection-sort";
+export * from "./sort-algorithms/bubble-sort";
