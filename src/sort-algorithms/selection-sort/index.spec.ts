@@ -16,6 +16,15 @@ describe("Selection Sort tests", () => {
     expect(array).toEqual(sortedArray);
   });
 
+  it("must return an array ordered from largest to smallest", () => {
+    const array = generateSortedArrayOfNumber(60);
+    const sortedArray = generateNotSortedArrayOfNumber(60);
+
+    selectionSort({ array, isDecreasing: false });
+
+    expect(array).toEqual(sortedArray);
+  });
+
   it("should return sorted array when array is already sorted", () => {
     const array = generateSortedArrayOfNumber(30);
     selectionSort({ array });
