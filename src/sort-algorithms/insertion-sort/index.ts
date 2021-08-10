@@ -1,6 +1,6 @@
 import { InsertionSortPropsType } from "./types";
 
-export function insertionSort({ array, isDecreasing }: InsertionSortPropsType) {
+export function insertionSort({ array }: InsertionSortPropsType) {
   let leftIndex = 0;
   let rightIndex = 0;
   const arrayLength = array.length;
