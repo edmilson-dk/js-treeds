@@ -49,4 +49,13 @@ describe("Insertion sort tests", () => {
 
     expect(array).toEqual(sortedArray);
   });
+
+  it("should return sorted big array", () => {
+    const array = generateNotSortedArrayOfNumber(20000);
+    const sortedArray = generateSortedArrayOfNumber(20000);
+
+    insertionSort({ array });
+
+    expect(array).toEqual(sortedArray);
+  });
 });
