@@ -2,7 +2,9 @@ import {
   arrayNotOrdenatedWithRepeatedElements,
   arrayOrdenatedWithRepeatedElements,
   generateNotSortedArrayOfNumber,
+  generateNotSortedArrayOfNumbersFloating,
   generateSortedArrayOfNumber,
+  generateSortedArrayOfNumbersFloating,
 } from "../../__tests__/utils";
 import { insertionSort } from "./index";
 
@@ -53,6 +55,15 @@ describe("Insertion sort tests", () => {
   it("should return sorted big array", () => {
     const array = generateNotSortedArrayOfNumber(20000);
     const sortedArray = generateSortedArrayOfNumber(20000);
+
+    insertionSort({ array });
+
+    expect(array).toEqual(sortedArray);
+  });
+
+  it("should return sorted array when array contains floating numbers", () => {
+    const array = generateNotSortedArrayOfNumbersFloating(30);
+    const sortedArray = generateSortedArrayOfNumbersFloating(30);
 
     insertionSort({ array });
 
