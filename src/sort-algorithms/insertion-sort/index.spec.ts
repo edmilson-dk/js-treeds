@@ -26,4 +26,13 @@ describe("Insertion sort tests", () => {
 
     expect(array).toEqual([]);
   });
+
+  it("should return sorted array when array contains negative numbers", () => {
+    const array = generateSortedArrayOfNumber(30, true);
+    const sortedArray = generateNotSortedArrayOfNumber(30, true);
+
+    insertionSort({ array });
+
+    expect(array).toEqual(sortedArray);
+  });
 });
