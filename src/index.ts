@@ -10,3 +10,4 @@ export * from "./search-algorithms/ternary-search";
 export * from "./sort-algorithms/selection-sort";
 export * from "./sort-algorithms/bubble-sort";
 export * from "./sort-algorithms/insertion-sort";
+export * from "./sort-algorithms/merge-sort";
