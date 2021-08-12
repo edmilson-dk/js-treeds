@@ -2,7 +2,9 @@ import {
   arrayNotOrdenatedWithRepeatedElements,
   arrayOrdenatedWithRepeatedElements,
   generateNotSortedArrayOfNumber,
+  generateNotSortedArrayOfNumbersFloating,
   generateSortedArrayOfNumber,
+  generateSortedArrayOfNumbersFloating,
 } from "../../__tests__/utils";
 import { mergeSort } from "./index";
 
@@ -71,8 +73,21 @@ describe("Merge sort tests", () => {
   });
 
   it("should return sorted big array", () => {
-    const array = generateNotSortedArrayOfNumber(5000000);
-    const sortedArray = generateSortedArrayOfNumber(5000000);
+    const array = generateNotSortedArrayOfNumber(20000);
+    const sortedArray = generateSortedArrayOfNumber(20000);
+
+    mergeSort({
+      array,
+      leftIndex: 0,
+      rightIndex: array.length - 1,
+    });
+
+    expect(array).toEqual(sortedArray);
+  });
+
+  it("should return sorted array when array contains floating numbers", () => {
+    const array = generateNotSortedArrayOfNumbersFloating(30);
+    const sortedArray = generateSortedArrayOfNumbersFloating(30);
 
     mergeSort({
       array,
