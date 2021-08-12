@@ -69,4 +69,17 @@ describe("Merge sort tests", () => {
 
     expect(array).toEqual(sortedArray);
   });
+
+  it("should return sorted big array", () => {
+    const array = generateNotSortedArrayOfNumber(5000000);
+    const sortedArray = generateSortedArrayOfNumber(5000000);
+
+    mergeSort({
+      array,
+      leftIndex: 0,
+      rightIndex: array.length - 1,
+    });
+
+    expect(array).toEqual(sortedArray);
+  });
 });
