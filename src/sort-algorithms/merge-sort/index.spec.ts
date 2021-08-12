@@ -14,4 +14,16 @@ describe("Merge sort tests", () => {
 
     expect(array).toEqual(sortedArray);
   });
+
+  it("should return sorted array when array is already sorted", () => {
+    const array = generateSortedArrayOfNumber(30);
+
+    mergeSort({
+      array,
+      leftIndex: 0,
+      rightIndex: array.length - 1,
+    });
+
+    expect(array).toEqual(array);
+  });
 });
