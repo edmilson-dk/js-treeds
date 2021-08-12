@@ -26,4 +26,16 @@ describe("Merge sort tests", () => {
 
     expect(array).toEqual(array);
   });
+
+  it("should return sorted array when array is empty", () => {
+    const array: number[] = [];
+
+    mergeSort({
+      array,
+      leftIndex: 0,
+      rightIndex: array.length - 1,
+    });
+
+    expect(array).toEqual([]);
+  });
 });
