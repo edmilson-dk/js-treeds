@@ -1,4 +1,9 @@
-import { generateNotSortedArrayOfNumber, generateSortedArrayOfNumber } from "../../__tests__/utils";
+import {
+  arrayNotOrdenatedWithRepeatedElements,
+  arrayOrdenatedWithRepeatedElements,
+  generateNotSortedArrayOfNumber,
+  generateSortedArrayOfNumber,
+} from "../../__tests__/utils";
 import { heapSort } from "./index";
 
 describe("Heap sort tests", () => {
@@ -30,6 +35,15 @@ describe("Heap sort tests", () => {
   it("should return sorted array when array contains negative numbers", () => {
     const array = generateSortedArrayOfNumber(30, true);
     const sortedArray = generateNotSortedArrayOfNumber(30, true);
+
+    heapSort({ array });
+
+    expect(array).toEqual(sortedArray);
+  });
+
+  it("should return an ordered array when the array contains repeated elements", () => {
+    const array = arrayNotOrdenatedWithRepeatedElements;
+    const sortedArray = arrayOrdenatedWithRepeatedElements;
 
     heapSort({ array });
 
