@@ -5,6 +5,8 @@ import {
   arrayOrdenatedWithRepeatedElements,
   generateNotSortedArrayOfNumbersFloating,
   generateSortedArrayOfNumbersFloating,
+  genericArrayNotOrdenated,
+  genericArrayOrdenated,
 } from "../../__tests__/utils";
 import { selectionSort } from "./index";
 
@@ -70,6 +72,15 @@ describe("Selection Sort tests", () => {
   it("should return sorted array when array contains floating numbers", () => {
     const array = generateNotSortedArrayOfNumbersFloating(30);
     const sortedArray = generateSortedArrayOfNumbersFloating(30);
+
+    selectionSort({ array });
+
+    expect(array).toEqual(sortedArray);
+  });
+
+  it("should return sorted array when array constains generics values", () => {
+    const array = genericArrayNotOrdenated;
+    const sortedArray = genericArrayOrdenated;
 
     selectionSort({ array });
 
