@@ -10,8 +10,8 @@ import { mergeSort } from "./index";
 
 describe("Merge sort tests", () => {
   it("must return an array ordered from smallest to largest", () => {
-    const array = generateNotSortedArrayOfNumber(7);
-    const sortedArray = generateSortedArrayOfNumber(7);
+    const array = generateNotSortedArrayOfNumber(80);
+    const sortedArray = generateSortedArrayOfNumber(80);
 
     mergeSort({
       array,
