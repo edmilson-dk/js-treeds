@@ -30,3 +30,5 @@ export function generateNotSortedArrayOfNumbersFloating(
 
 export const arrayNotOrdenatedWithRepeatedElements = [1, 3, 1, 4, 3, 5, 10, 12, 10, 23, 4, 11];
 export const arrayOrdenatedWithRepeatedElements = [1, 1, 3, 3, 4, 4, 5, 10, 10, 11, 12, 23];
+export const genericArrayNotOrdenated = [120.9, -1, 0, 2, 3, 0.2, -3, -2, 0.3, 2.2, 33.33, -34];
+export const genericArrayOrdenated = [-34, -3, -2, -1, 0, 0.2, 0.3, 2, 2.2, 3, 33.33, 120.9];

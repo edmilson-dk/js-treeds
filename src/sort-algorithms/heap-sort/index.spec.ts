@@ -5,6 +5,8 @@ import {
   generateNotSortedArrayOfNumbersFloating,
   generateSortedArrayOfNumber,
   generateSortedArrayOfNumbersFloating,
+  genericArrayNotOrdenated,
+  genericArrayOrdenated,
 } from "../../__tests__/utils";
 import { heapSort } from "./index";
 
@@ -64,6 +66,15 @@ describe("Heap sort tests", () => {
   it("should return sorted array when array contains floating numbers", () => {
     const array = generateNotSortedArrayOfNumbersFloating(30);
     const sortedArray = generateSortedArrayOfNumbersFloating(30);
+
+    heapSort({ array });
+
+    expect(array).toEqual(sortedArray);
+  });
+
+  it("should return sorted array when array constains generics values", () => {
+    const array = genericArrayNotOrdenated;
+    const sortedArray = genericArrayOrdenated;
 
     heapSort({ array });
 

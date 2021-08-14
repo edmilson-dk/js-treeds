@@ -54,8 +54,8 @@ describe("Bubble sort tests", () => {
   });
 
   it("should return sorted big array", () => {
-    const array = generateNotSortedArrayOfNumber(20000);
-    const sortedArray = generateSortedArrayOfNumber(20000);
+    const array = generateNotSortedArrayOfNumber(1000);
+    const sortedArray = generateSortedArrayOfNumber(1000);
 
     bubbleSort({ array });
 
