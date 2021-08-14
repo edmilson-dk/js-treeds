@@ -5,6 +5,8 @@ import {
   generateNotSortedArrayOfNumbersFloating,
   generateSortedArrayOfNumber,
   generateSortedArrayOfNumbersFloating,
+  genericArrayNotOrdenated,
+  genericArrayOrdenated,
 } from "../../__tests__/utils";
 import { bubbleSort } from "./index";
 
@@ -56,6 +58,15 @@ describe("Bubble sort tests", () => {
   it("should return sorted big array", () => {
     const array = generateNotSortedArrayOfNumber(1000);
     const sortedArray = generateSortedArrayOfNumber(1000);
+
+    bubbleSort({ array });
+
+    expect(array).toEqual(sortedArray);
+  });
+
+  it("should return sorted array when array constains generics values", () => {
+    const array = genericArrayNotOrdenated;
+    const sortedArray = genericArrayOrdenated;
 
     bubbleSort({ array });
 
