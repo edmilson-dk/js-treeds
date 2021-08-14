@@ -49,4 +49,13 @@ describe("Heap sort tests", () => {
 
     expect(array).toEqual(sortedArray);
   });
+
+  it("should return sorted big array", () => {
+    const array = generateNotSortedArrayOfNumber(20000);
+    const sortedArray = generateSortedArrayOfNumber(20000);
+
+    heapSort({ array });
+
+    expect(array).toEqual(sortedArray);
+  });
 });
