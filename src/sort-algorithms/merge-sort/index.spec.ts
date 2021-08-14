@@ -5,6 +5,8 @@ import {
   generateNotSortedArrayOfNumbersFloating,
   generateSortedArrayOfNumber,
   generateSortedArrayOfNumbersFloating,
+  genericArrayNotOrdenated,
+  genericArrayOrdenated,
 } from "../../__tests__/utils";
 import { mergeSort } from "./index";
 
@@ -88,6 +90,19 @@ describe("Merge sort tests", () => {
   it("should return sorted array when array contains floating numbers", () => {
     const array = generateNotSortedArrayOfNumbersFloating(30);
     const sortedArray = generateSortedArrayOfNumbersFloating(30);
+
+    mergeSort({
+      array,
+      leftIndex: 0,
+      rightIndex: array.length - 1,
+    });
+
+    expect(array).toEqual(sortedArray);
+  });
+
+  it("should return sorted array when array constains generics values", () => {
+    const array = genericArrayNotOrdenated;
+    const sortedArray = genericArrayOrdenated;
 
     mergeSort({
       array,
