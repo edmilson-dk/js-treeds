@@ -18,4 +18,12 @@ describe("Heap sort tests", () => {
 
     expect(array).toEqual(array);
   });
+
+  it("should return sorted array when array is empty", () => {
+    const array: number[] = [];
+
+    heapSort({ array });
+
+    expect(array).toEqual([]);
+  });
 });
