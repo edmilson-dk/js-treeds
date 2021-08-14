@@ -10,4 +10,12 @@ describe("Heap sort tests", () => {
 
     expect(array).toEqual(sortedArray);
   });
+
+  it("should return sorted array when array is already sorted", () => {
+    const array = generateSortedArrayOfNumber(30);
+
+    heapSort({ array });
+
+    expect(array).toEqual(array);
+  });
 });
