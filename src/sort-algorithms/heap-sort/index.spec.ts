@@ -26,4 +26,13 @@ describe("Heap sort tests", () => {
 
     expect(array).toEqual([]);
   });
+
+  it("should return sorted array when array contains negative numbers", () => {
+    const array = generateSortedArrayOfNumber(30, true);
+    const sortedArray = generateNotSortedArrayOfNumber(30, true);
+
+    heapSort({ array });
+
+    expect(array).toEqual(sortedArray);
+  });
 });
