@@ -11,3 +11,7 @@ export * from "./sort-algorithms/selection-sort";
 export * from "./sort-algorithms/bubble-sort";
 export * from "./sort-algorithms/insertion-sort";
 export * from "./sort-algorithms/merge-sort";
+export * from "./sort-algorithms/heap-sort";
+// export * from "./sort-algorithms/quick-sort";
+// export * from "./sort-algorithms/radix-sort";
+// export * from "./sort-algorithms/shell-sort";

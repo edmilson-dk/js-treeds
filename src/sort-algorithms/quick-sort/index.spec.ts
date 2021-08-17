@@ -14,4 +14,16 @@ describe("Quick sort tests", () => {
 
     expect(array).toEqual(sortedArray);
   });
+
+  it("should return sorted array when array is already sorted", () => {
+    const array = generateSortedArrayOfNumber(30);
+
+    quickSort({
+      array,
+      low: 0,
+      high: array.length - 1,
+    });
+
+    expect(array).toEqual(array);
+  });
 });
