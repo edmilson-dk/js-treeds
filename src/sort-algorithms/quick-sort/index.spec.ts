@@ -38,4 +38,17 @@ describe("Quick sort tests", () => {
 
     expect(array).toEqual([]);
   });
+
+  it("should return sorted array when array contains negative numbers", () => {
+    const array = generateSortedArrayOfNumber(30, true);
+    const sortedArray = generateNotSortedArrayOfNumber(30, true);
+
+    quickSort({
+      array,
+      low: 0,
+      high: array.length - 1,
+    });
+
+    expect(array).toEqual(sortedArray);
+  });
 });
