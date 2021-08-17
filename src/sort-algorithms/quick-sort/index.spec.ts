@@ -57,9 +57,9 @@ describe("Quick sort tests", () => {
     expect(array).toEqual(sortedArray);
   });
 
-  it("should return an ordered array when the array contains repeated elements", () => {
-    const array = arrayNotOrdenatedWithRepeatedElements;
-    const sortedArray = arrayOrdenatedWithRepeatedElements;
+  it("should return sorted big array 100K", () => {
+    const array = generateNotSortedArrayOfNumber(100000);
+    const sortedArray = generateSortedArrayOfNumber(100000);
 
     quickSort({
       array,

@@ -2,14 +2,23 @@ import { swap } from "../../utils";
 import { QuickSortPartitionPropsType, QuickSortPropsType } from "./types";
 
 function partition({ array, low, high }: QuickSortPartitionPropsType): number {
-  let pivot = array[high];
-  let leftIndex = low - 1;
-  let rightIndex = low;
+  let middle = low + Math.floor((high - low) / 2);
 
-  for (rightIndex; rightIndex < high; rightIndex++) {
-    if (array[rightIndex] <= pivot) {
+  let pivot = array[middle];
+  let leftIndex = low - 1;
+  let rightIndex = high + 1;
+
+  while (leftIndex < rightIndex) {
+    do {
       leftIndex++;
-      swap<number>({
+    } while (array[leftIndex] < pivot);
+
+    do {
+      rightIndex--;
+    } while (array[rightIndex] > pivot);
+
+    if (leftIndex < rightIndex) {
+      swap({
         array,
         indexA: leftIndex,
         indexB: rightIndex,
@@ -17,13 +26,7 @@ function partition({ array, low, high }: QuickSortPartitionPropsType): number {
     }
   }
 
-  swap<number>({
-    array,
-    indexA: leftIndex + 1,
-    indexB: high,
-  });
-
-  return leftIndex + 1;
+  return rightIndex;
 }
 
 export function quickSort({ array, low, high }: QuickSortPropsType): void {
