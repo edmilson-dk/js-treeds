@@ -2,7 +2,9 @@ import {
   arrayNotOrdenatedWithRepeatedElements,
   arrayOrdenatedWithRepeatedElements,
   generateNotSortedArrayOfNumber,
+  generateNotSortedArrayOfNumbersFloating,
   generateSortedArrayOfNumber,
+  generateSortedArrayOfNumbersFloating,
 } from "../../__tests__/utils";
 import { quickSort } from "./index";
 
@@ -60,6 +62,19 @@ describe("Quick sort tests", () => {
   it("should return sorted big array 100K", () => {
     const array = generateNotSortedArrayOfNumber(100000);
     const sortedArray = generateSortedArrayOfNumber(100000);
+
+    quickSort({
+      array,
+      low: 0,
+      high: array.length - 1,
+    });
+
+    expect(array).toEqual(sortedArray);
+  });
+
+  it("should return sorted array when array contains floating numbers", () => {
+    const array = generateNotSortedArrayOfNumbersFloating(30);
+    const sortedArray = generateSortedArrayOfNumbersFloating(30);
 
     quickSort({
       array,
