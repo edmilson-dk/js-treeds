@@ -1,4 +1,9 @@
-import { generateNotSortedArrayOfNumber, generateSortedArrayOfNumber } from "../../__tests__/utils";
+import {
+  arrayNotOrdenatedWithRepeatedElements,
+  arrayOrdenatedWithRepeatedElements,
+  generateNotSortedArrayOfNumber,
+  generateSortedArrayOfNumber,
+} from "../../__tests__/utils";
 import { quickSort } from "./index";
 
 describe("Quick sort tests", () => {
@@ -42,6 +47,19 @@ describe("Quick sort tests", () => {
   it("should return sorted array when array contains negative numbers", () => {
     const array = generateSortedArrayOfNumber(30, true);
     const sortedArray = generateNotSortedArrayOfNumber(30, true);
+
+    quickSort({
+      array,
+      low: 0,
+      high: array.length - 1,
+    });
+
+    expect(array).toEqual(sortedArray);
+  });
+
+  it("should return an ordered array when the array contains repeated elements", () => {
+    const array = arrayNotOrdenatedWithRepeatedElements;
+    const sortedArray = arrayOrdenatedWithRepeatedElements;
 
     quickSort({
       array,
