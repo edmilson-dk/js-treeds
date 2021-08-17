@@ -26,4 +26,16 @@ describe("Quick sort tests", () => {
 
     expect(array).toEqual(array);
   });
+
+  it("should return sorted array when array is empty", () => {
+    const array: number[] = [];
+
+    quickSort({
+      array,
+      low: 0,
+      high: array.length - 1,
+    });
+
+    expect(array).toEqual([]);
+  });
 });
