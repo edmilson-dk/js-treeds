@@ -32,6 +32,15 @@ describe("Counting sort tests", () => {
     expect(array).toEqual([]);
   });
 
+  it("should return sorted big array", () => {
+    const array = generateNotSortedArrayOfNumber(20000);
+    const sortedArray = generateSortedArrayOfNumber(20000);
+
+    countSort(array);
+
+    expect(array).toEqual(sortedArray);
+  });
+
   it("should return an ordered array when the array contains repeated elements", () => {
     const array = arrayNotOrdenatedWithRepeatedElements;
     const sortedArray = arrayOrdenatedWithRepeatedElements;
