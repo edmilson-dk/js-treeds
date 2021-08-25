@@ -16,6 +16,14 @@ describe("Counting sort tests", () => {
     expect(array).toEqual(sortedArray);
   });
 
+  it("should return sorted array when array is already sorted", () => {
+    const array = generateSortedArrayOfNumber(30);
+
+    countSort(array);
+
+    expect(array).toEqual(array);
+  });
+
   it("should return an ordered array when the array contains repeated elements", () => {
     const array = arrayNotOrdenatedWithRepeatedElements;
     const sortedArray = arrayOrdenatedWithRepeatedElements;
