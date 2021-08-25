@@ -24,6 +24,14 @@ describe("Counting sort tests", () => {
     expect(array).toEqual(array);
   });
 
+  it("should return sorted array when array is empty", () => {
+    const array: number[] = [];
+
+    countSort(array);
+
+    expect(array).toEqual([]);
+  });
+
   it("should return an ordered array when the array contains repeated elements", () => {
     const array = arrayNotOrdenatedWithRepeatedElements;
     const sortedArray = arrayOrdenatedWithRepeatedElements;
