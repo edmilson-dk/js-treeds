@@ -1,39 +1,14 @@
-import { BinarySearchIntPropsType, BinarySearchStrPropsType } from "./types";
-
-export function binarySearchStr({ array, left, right, wanted }: BinarySearchStrPropsType): number {
-  if (right >= left) {
-    // https://stackoverflow.com/questions/6735259/calculating-mid-in-binary-search
-    const middle = left + Math.floor((right - left) / 2);
-    const foundIndex = wanted.localeCompare(array[middle]);
-
-    if (foundIndex === 0) {
-      return middle;
-    }
-
-    if (foundIndex < 0) {
-      return binarySearchStr({
-        array,
-        left,
-        right: middle - 1,
-        wanted,
-      });
-    }
-
-    return binarySearchStr({
-      array,
-      left: middle + 1,
-      right,
-      wanted,
-    });
-  }
-
-  return -1;
-}
+export type BinarySearchPropsType = {
+  array: number[];
+  left: number;
+  right: number;
+  wanted: number;
+};
 
 // Does not work correctly with negative number arrays
 // Only works with ordered number arrays
 
-export function binarySearchInt({ array, left, right, wanted }: BinarySearchIntPropsType): number {
+export function binarySearch({ array, left, right, wanted }: BinarySearchPropsType): number {
   if (right >= left) {
     // https://stackoverflow.com/questions/6735259/calculating-mid-in-binary-search
     const middle = left + Math.floor((right - left) / 2);
@@ -43,7 +18,7 @@ export function binarySearchInt({ array, left, right, wanted }: BinarySearchIntP
     }
 
     if (array[middle] > wanted) {
-      return binarySearchInt({
+      return binarySearch({
         array,
         left,
         right: middle - 1,
@@ -51,7 +26,7 @@ export function binarySearchInt({ array, left, right, wanted }: BinarySearchIntP
       });
     }
 
-    return binarySearchInt({
+    return binarySearch({
       array,
       left: middle + 1,
       right,

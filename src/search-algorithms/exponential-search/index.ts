@@ -1,4 +1,4 @@
-import { binarySearchInt } from "../binary-search";
+import { binarySearch } from "../binary-search";
 import { ExponentialSearchPropsType } from "./types";
 
 // Does not work correctly with negative number arrays
@@ -14,7 +14,7 @@ export function exponentialSearch({ array, wanted }: ExponentialSearchPropsType)
     index *= 2;
   }
 
-  return binarySearchInt({
+  return binarySearch({
     array,
     left: index / 2,
     right: Math.min(index, arrayLength - 1),
