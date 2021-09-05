@@ -51,6 +51,10 @@ export * from "./sort-algorithms/counting-sort";
 // export * from "./data-structures/hash-table-double-hashing-with-chaining";
 // export * from "./data-structures/hash-table-double-hashing-with-open-addressing";
 // export * from "./data-structures/avl-tree";
+// export * from "./data-structures/bst-tree";
+// export * from "./data-structures/red-black-tree";
+// export * from "./data-structures/segment-tree";
+// export * from "./data-structures/fenwick-tree";
 // export * from "./data-structures/heap";
 // export * from "./data-structures/splay-tree";
 // export * from "./data-structures/graph"
